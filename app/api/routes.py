@@ -58,7 +58,7 @@ def verify_whatsapp_webhook(request: Request):
     token = params.get("hub.verify_token")
     challenge = params.get("hub.challenge")
     
-    verify_token = os.getenv("WHATSAPP_VERIFY_TOKEN", "homeveda_secret")
+    verify_token = os.getenv("WHATSAPP_VERIFY_TOKEN", "secret_homved")
     
     print(f"[VERIFY] Received mode: {mode}, token: {token}, challenge: {challenge}")
     print(f"[VERIFY] Expected token: {verify_token}")
